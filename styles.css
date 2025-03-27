@@ -1,18 +1,18 @@
 
-
+/* Google fonts used here */
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Rubik+Gemstones&display=swap');
 
-:root{
+* {margin: 0;}
 
+:root{
+    --welcome-bg-color:rgb(24, 6, 6);
+    --intro-bg-color:#B98B82;
+    --bio-container-bg-color:#F3B3A6;
     --main-bg-color:#d0ada7;
     --profile-bg-color:#C49792;
     --name-text-font: "Bree Serif", serif;
     --title-text-font: "Rubik Gemstones", system-ui;
 }
-
-* {margin: 0;}
-
-
 #welcome-section{
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
     margin:auto;
     width: 100%;
     height: 100vh;
-    background: rgb(24, 6, 6);
+    background: var(--welcome-bg-color);
 }
 
 .btn-float {
@@ -56,7 +56,6 @@
  display: flex;
  justify-content: center;
  align-items: center;
- background: white;
  width:220px;
  height: 220px;
  border-radius: 50%;
@@ -104,7 +103,7 @@
 }
 
 #intro-sec{
-    background: #B98B82;
+    background: var(--intro-bg-color);
     width: 100%;
     height: 100vh;
 }
@@ -138,7 +137,7 @@
     font-family: var(--title-text-font);
 }
 #bio-container{
-    background-color: #F3B3A6;
+    background-color:var(--bio-container-bg-color);
     width: 100%;
     height: 100vh;
 }
