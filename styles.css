@@ -4,6 +4,8 @@
 
 * {margin: 0;}
 
+
+
 :root{
     --welcome-bg-color:rgb(24, 6, 6);
     --intro-bg-color:#B98B82;
@@ -20,6 +22,30 @@
     width: 100%;
     height: 100vh;
     background: var(--welcome-bg-color);
+}
+
+#sideBar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+    position: fixed;
+    width:8rem;
+    height: 300px;
+    color: aliceblue;
+    top: 250px;
+    right: 10px;
+}
+#sideBar > a {
+    text-decoration: none;
+    color: var(--welcome-bg-color);
+}
+.iconLink {
+    background: aliceblue;
+    padding: 10px;
+    border-radius: 8px;
+    border: solid 2px var(--welcome-bg-color);
+    font-family: var(--title-text-font);
 }
 
 .btn-float {
