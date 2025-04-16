@@ -2,9 +2,12 @@
 /* Google fonts used here */
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Rubik+Gemstones&display=swap');
 
-* {margin: 0;}
+* {margin: 0;
+   padding: 0;}
 
-
+body {
+    scroll-behavior: smooth;
+}
 
 :root{
     --welcome-bg-color:rgb(24, 6, 6);
@@ -17,7 +20,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin:auto;
     width: 100%;
     height: 100vh;
@@ -52,15 +55,17 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 10px;
+    padding: 6px;
     font-size: 16px;
     cursor: pointer;
     z-index: 5;
-    width: 30px;
-    height: 60px;
-    border-radius: 8px;
-    background-color: #0f4880;
-    border: solid 0px 0;    
+    width: 20px;
+    height: 20px;
+    background: #727070;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #title {    
@@ -80,8 +85,8 @@
  display: flex;
  justify-content: center;
  align-items: center;
- width:220px;
- height: 220px;
+ width:200px;
+ height: 200px;
  border-radius: 50%;
  border: solid 10px rgb(85, 60, 60);
 }
@@ -161,13 +166,13 @@
 #bio-container{
     background-color:var(--bio-container-bg-color);
     width: 100%;
-    height: auto;
+    height: 100vh;
 }
 #bio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    width: 100%;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 1rem;
+    width: 90%;
     height: auto;    
     justify-content: center;
     padding: 20px;
