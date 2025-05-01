@@ -1,48 +1,130 @@
 
 /* Google fonts used here */
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Rubik+Gemstones&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gruppo&family=Rubik+Gemstones&family=Wallpoet&display=swap');
 
+/* Google fonts used in other projects */
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=DM+Serif+Display:ital@0;1&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
 * {margin: 0;
    padding: 0;}
 
 body {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
 }
 
 :root{
     --welcome-bg-color:rgb(24, 6, 6);
-    --intro-bg-color:#B98B82;
-    --bio-container-bg-color:#F3B3A6;
-    --name-text-font: "Bree Serif", serif;
+    --intro-bg-color:rgb(56, 51, 51);
+    --bio-container-bg-color:rgb(66, 62, 62);
+    --navLink-color:rgb(202, 199, 199);
+    --title-color: #0ff;
+    --hover-color:rgb(205, 34, 34);
+
+    --portfolio-font:"Wallpoet", sans-serif;
+    --name-font:"Gruppo", sans-serif;
     --title-text-font: "Rubik Gemstones", system-ui;
+    --text-font:"Exo 2", sans-serif;
+    
 }
-#welcome-section{
+#navBar{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+    position: fixed;
+    min-width:1.6rem;
+    height: auto;
+    color: aliceblue;
+    top: 280px;
+    left: 6px;
+    background:none;
+    z-index: 1000;
+
+    a{
+        text-decoration: none;
+        color: var(--welcome-bg-color);
+        font-family: var(--text-font);
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 0.2rem; 
+        transition: transform 0.3s ease;
+        letter-spacing: 1px;
+        border: solid 1px var(--title-color);
+        border-radius: 4px;
+        background: aliceblue;
+    }
+    a:hover{
+        color: var(--title-color);
+        background: var(--welcome-bg-color);
+        transform: translateX(8px);
+    }   
+}
+.dnd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+#welcome-section{ 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around  ;
     margin:auto;
     width: 100%;
     height: 100vh;
     background: var(--welcome-bg-color);
-}
 
+       h2{
+        font-family: var(--portfolio-font);
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+#name{
+    color: rgb(173, 174, 174);
+    font-family: var(--name-font);
+    font-size:1.8rem;
+    font-weight: 600;
+    font-style: normal;
+}
 #sideBar {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 2px;
     position: fixed;
-    width:8rem;
-    height: 300px;
+    min-width:3rem;
+    height: auto;
     color: aliceblue;
-    top: 250px;
+    top: 300px;
     right: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px white;
+    border: solid 1px rgb(116, 116, 116);
+    z-index: 1;
+    margin-left: -20px;  
+
+    a {
+        text-decoration: none;
+        color: var(--welcome-bg-color);
+        font-size: 2rem;
+        padding: 0.4rem; 
+        transition: transform 0.3s ease;       
+    }
+    a:hover{
+        color: var(--title-color);
+        transform: translateY(-4px);
+    }
 }
-#sideBar > a {
-    text-decoration: none;
-    color: var(--welcome-bg-color);
-}
+
 .iconLink {
     background: aliceblue;
     padding: 10px;
@@ -61,17 +143,22 @@ body {
     z-index: 5;
     width: 20px;
     height: 20px;
-    background: #727070;
+    background: #b3b2b2;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #fff;
+
+    :hover{
+        color: var(--hover-color);
+    }
 }
 
 #title {    
     text-align: center;
     height: auto;
-    font-size: 4em;
+    font-size: 5rem;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing:4px;
     font-weight:800;
@@ -89,18 +176,19 @@ body {
  height: 200px;
  border-radius: 50%;
  border: solid 10px rgb(85, 60, 60);
-}
-#profile-img > img {
+
+ img {
     width:200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
 }
-#heading {
+}
+#role-title {
     text-align: center;    
     font-family:var(--title-text-font);
     letter-spacing: 2px;
-    font-size:1.2em;
+    font-size:1.8em;
     animation: glow 2s infinite ease-in-out;
     text-shadow: 
     0 0 5px #0ff,
@@ -108,32 +196,25 @@ body {
     0 0 20px #0ff,
     0 0 40px #0ff;
 }
-#name {
+#heroText{
+    text-align: center;
+    min-width: 50%;
     font-size: 1.8em;
-    font-family: var(--name-text-font);
-    letter-spacing: 1px;
-    color: #88add2;        
+    font-family: var(--text-font);
+    font-style: normal;
+    font-optical-sizing: auto;
+    letter-spacing:0.4px;
+    color:#8c8a8a;        
 }
-#contact-info {
-    display: flex;
-    font-family: var(--name-text-font);
-    font-size: 1em;
-    letter-spacing: 1px;
-    flex-direction: column;
-    row-gap: 4px;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    color: #88add2;
-}
-#mobile, #email {
-    display: flex;
-    gap: 2px;
-}
+
 #intro-sec{
     background: var(--intro-bg-color);
     width: 100%;
     height:100vh;
+
+    h1{
+        color: white;
+    }
 }
 #intro {
     display: flex;
@@ -155,18 +236,33 @@ body {
     height: auto;
 }
 #intro-text {
+    color: aliceblue;
     width: 60%;
     height: auto;
+    font-size: 1.4rem;
+    font-family:var(--text-font);
+    text-align: justify;
+    hyphens: auto;
 }
 .headline {
+    margin: auto;
+    background: var(--welcome-bg-color);
+    width: 20%;
     text-align: center;
-    padding: 10px;
+    font-size: 1.8rem;
+    padding: 0.6rem;
+    letter-spacing: 2px;
     font-family: var(--title-text-font);
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    color: aliceblue;
+    box-shadow: 0px 4px 10px rgb(97, 97, 97);
 }
 #bio-container{
     background-color:var(--bio-container-bg-color);
     width: 100%;
     height: 100vh;
+    place-items: center;
 }
 #bio {
     display: grid;
@@ -174,8 +270,7 @@ body {
     gap: 1rem;
     width: 90%;
     height: auto;    
-    justify-content: center;
-    padding: 20px;
+    padding: 20px; 
 }
 .section {    
     background-color: aliceblue;   
@@ -183,6 +278,46 @@ body {
     padding: 20px;
     transition: transform 0.3s ease;
     box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    
+
+    h3{
+        color: var(--title-color);
+    }
+    h4{font-family: var(--text-font);}
+    p{
+        text-align: justify;
+        hyphens: auto;
+        padding: 4px;
+        font-size: 1.2rem;
+        font-family: var(--text-font);
+    }
+    li{
+        font-family: var(--text-font);
+        font-weight: 600;
+    }
+}
+.list{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    a{text-decoration: none;
+      color: #000;}
+    a:hover{
+        color: var(--hover-color);
+    }
+    li{
+        font-size: 1.2rem;
+        list-style-type: square;
+    }
+}
+.heading{    
+        color: var(--welcome-bg-color);
+        font-family: var(--title-text-font);
+        text-align: center;
+        padding: 06px;
+        letter-spacing: 1px;    
 }
 .sub-heading {
     color: #fff;
@@ -190,13 +325,205 @@ body {
     padding: 10px;
     border-radius: 4px;
     letter-spacing: 1px;
+    font-family: var(--name-font);    
 }
-#projects {
-    display: grid;
+#projects{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: start;
+    width: 100%;
+    height: auto;
+    background: #696a4f;
+    
+    h1, h2{ 
+        display: flex;
+        background: var(--welcome-bg-color);
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--name-font);
+    }
+
+    a{
+        text-decoration: none;        
+    }
+}
+h1{
+    font-style: italic; 
+    color: #0ff;
+}
+h2{
+    font-style: normal;
+    color: aliceblue;
+    letter-spacing: 1px;
+}
+#projContainer{
+    width: 92%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly; 
+}
+#projDetails{
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    font-family: var(--text-font);
+    font-size: 1.4rem;
+    color: beige;
+
+    p{
+        text-align: justify;
+        hyphens: auto;       
+    }
+    h6{
+        font-weight: 400;
+    }
+    ul{
+        list-style-type:circle;
+    }
+}
+.birthStone{
+    font-size: 2rem;
+    font-family: "Birthstone", cursive;
+}
+.DMserif{
+    font-family: "DM Serif Display", serif;
+}
+.colBox {
+    width: 100%;
+    height: 40px;    
+}
+.col-1{
+    background: #CF995F;
+}
+.col-2{
+    background: #F1DDAA;
+}
+.gitHubLink{
+    width:80%;
+    text-align: center;
+    color: aliceblue;
+    background: var(--welcome-bg-color);
+    padding: 0.4rem;
+    border-radius: 08px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgb(77, 77, 77);
+}
+.gitHubLink:hover{
+    color: var(--title-color);
+    transform: translateX(4px);
+}
+#techStack{
+    font-size: 2.4rem;
+}
+#projImg{
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    justify-content: space-between;
+    align-items: center;
+    width:65%;
+    height: 100%;
+}
+#bio-container{
+
+    h1{
+        color: aliceblue;
+    }
+}
+#callActions{
+    display: flex;
+    text-align: center;
+    height: 100px;
+    background: var(--welcome-bg-color);
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 2px rgb(81, 81, 81) ;
+    font-family: var(--text-font);
+
+    h2{
+        color: var(--title-color);
+    }
+}
+#endContainer{
     width: 100%;
     height: 100vh;
+}
+#endSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    background: var(--welcome-bg-color);
+    font-family: var(--text-font);
+    
+    input, textarea{
+        width: 80%;
+        border-radius: 8px;
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: none;
+        font-family: var(--text-font);
+    }
+    textarea {
+        height: 100px;
+    }
+
+    button{
+        width: 20%;
+        padding: 8px;
+        border: none;
+        border-radius: 8px;
+        background: var(--welcome-bg-color);
+        color: var(--title-color);
+        border: solid 2px var(--title-color);
+        transition: transform 0.3s ease-in-out;
+    }
+    button:hover{
+        transform: translateX(6px);       
+    }
+}
+#contact{
+    margin-top: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: aliceblue;
+    align-items: center;
 
 }
+
+#contactForm{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+}
+#verticleLine{
+    border: solid 0.5px rgb(81, 81, 81);
+}
+#contactInfo{
+    margin-top: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: aliceblue;
+
+    fieldset {
+        padding: 1rem;
+        border-color: aqua;
+        border-width: 1px;
+    }
+}
+
 
 
 @keyframes glow {
@@ -213,7 +540,7 @@ body {
    
 }
 
-@media (max-width:992px) {
+@media (width < 992px) {
 
     #intro {
         justify-content: center;
@@ -225,10 +552,51 @@ body {
     #intro-text, #section {
         width: 90%;
         height: auto;
+        text-align: justify;
+    }
+    #bio{
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
     }
     #bio-container {
         height: auto;
     }
+    #projects{
+        flex-direction: column;
+
+        h2{
+            text-align: center;
+        }
+    }
+    #projectContainer{
+        flex-direction: column;
+    }
+
+    #endContainer{
+        
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+    }
+    #callActions {
+              text-align: justify;
+              hyphens: auto;
+              h2{
+                width: 90%;
+              }              
+            }
+    #endSection{
+        flex-direction: column;
+    }
+    #contact, #contactInfo{
+        width: 90%;
+        margin: auto;
+
+        button{
+            width: 90%;
+        }
+    }
+
+
 
        
 }
