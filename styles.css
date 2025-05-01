@@ -30,6 +30,9 @@ body {
     --text-font:"Exo 2", sans-serif;
     
 }
+#mobileNav{
+    display: none;
+}
 #navBar{
     display: flex;
     flex-direction: column;
@@ -62,6 +65,34 @@ body {
         background: var(--welcome-bg-color);
         transform: translateX(8px);
     }   
+}
+#mNavContainer{
+    display: none;
+}
+#mobileNav{
+    width: 100%;
+    margin-top: 10px;
+    background: var(--welcome-bg-color);        
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    display: none;
+
+    a{  
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding: 0.4rem;
+        color: var(--title-color);
+        font-family: var(--text-font);
+        border-bottom: solid 1px rgb(112, 112, 112);
+    }
+}
+#scrollBtn{
+    display: none;
 }
 .dnd{
     display: flex;
@@ -175,7 +206,8 @@ body {
  width:200px;
  height: 200px;
  border-radius: 50%;
- border: solid 10px rgb(85, 60, 60);
+ border: solid 8px rgb(85, 60, 60);
+ box-shadow:0 0 20px rgb(166, 165, 165);
 
  img {
     width:200px;
@@ -385,6 +417,8 @@ h2{
     }
     ul{
         list-style-type:circle;
+        font-style: italic;
+        margin-left: 10px;
     }
 }
 .birthStone{
@@ -429,6 +463,18 @@ h2{
     align-items: center;
     width:65%;
     height: 100%;
+}
+#mainImg{
+    width:700px;
+    height:600px;
+}
+.secondImg {
+    width:300px;
+    height:500px;
+}
+.thirdImg {
+    width:600px;
+    height:400px;
 }
 #bio-container{
 
@@ -540,48 +586,117 @@ h2{
    
 }
 
-@media (width < 992px) {
+@media (width < 1180px) {
 
+    #welcome-section {
+
+        h2{
+            font-size: 3rem;
+        }
+    }
+    #role-title{
+        font-size: 1.4rem;
+    }
+    #heroText{
+        font-size: 1.4rem;
+        text-align: justify;
+        width: 80%;
+    }
+    #intro-sec{
+
+        height: auto;
+               
+        h1{
+            width: 60%;
+            font-size: 1rem;
+        }
+    }
     #intro {
         justify-content: center;
         flex-direction: column;
         gap: 20px;
         width: 100%;
-        height: auto;        
+        height: auto;
+        margin-top: 20px;
+        
     }
     #intro-text, #section {
         width: 90%;
         height: auto;
         text-align: justify;
+
+        h1{
+            width: 100%;
+            text-align: center;
+            margin: auto;
+            font-size: 1.4rem;
+        }
+    }
+    #intro-text{
+        margin-bottom: 20px; 
     }
     #bio{
         grid-template-columns: repeat(1, minmax(250px, 1fr));
     }
     #bio-container {
         height: auto;
+
+        h1{
+            width: 60%;
+            font-size: 1rem;
+        }
     }
     #projects{
         flex-direction: column;
 
         h2{
             text-align: center;
+            height: 50px;
         }
     }
-    #projectContainer{
-        flex-direction: column;
+    #projContainer{        
+        flex-direction: column-reverse;
+        justify-content:space-between;
+        align-items: center; 
     }
+    #mainImg{
+        width:100%;
+        height:auto;
+    }
+    #secondRowImg{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .secondImg{
+        width: auto;
+        height: 200px;
+    }
+    .thirdImg{
+        width: 300px;
+        height: 200px;
+    }
+    #projDetails{
+        width: 100%;
 
+    }
+    .gitHubLink{
+        margin: auto;
+        font-size: 1rem;
+    }
     #endContainer{
         
         flex-direction: column;
         justify-content: center;
         width: auto;
     }
-    #callActions {
-              text-align: justify;
-              hyphens: auto;
+    #callActions {              
+              
               h2{
+                text-align: justify;
                 width: 90%;
+                hyphens: auto;
+                font-size: 1.4rem;
               }              
             }
     #endSection{
@@ -592,16 +707,40 @@ h2{
         margin: auto;
 
         button{
-            width: 90%;
+            width: 80%;
         }
-    }
-
-
-
-       
+    }       
 }
     
+@media (width < 992px) {
 
+    body{
+       margin-top: 20px;
+    }
+    #navBar, #sideBar{
+        display: none;
+    }
+    #mNavContainer{
+        display: unset;
+        top: 0;        
+        width: 100%;
+        height: 40px;
+        background: var(--welcome-bg-color);
+        border-bottom: solid 1px rgb(112, 112, 112);
+        box-shadow: 0 2px 18px var(--title-color);
+        position: fixed;
+        a{  
+            right: 0;     
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 600;
+            padding: 0.4rem;
+            color: var(--title-color);
+            font-family: var(--text-font);
+            position: absolute;           
+        }
+    }
+}
 
 
 
