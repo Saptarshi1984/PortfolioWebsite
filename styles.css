@@ -459,6 +459,20 @@ body {
 #techStack{
     font-size: 2.4rem;
 }
+#gitLinks{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:0.4rem
+}
+.live-view{
+    font-weight: 800;
+    animation-name: blink;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
 #projImg{
     display: flex;
     flex-direction: column;
@@ -575,7 +589,18 @@ body {
         border-width: 1px;
     }
 }
-
+/* Animations */
+@keyframes blink {
+    0% {
+        color: aliceblue;
+    }
+    90% {
+        color: rgb(231, 170, 1);
+    }
+    100%{
+        color: aliceblue;
+    }
+}
 
 
 @keyframes glow {
@@ -707,9 +732,11 @@ body {
             }
     #endSection{
         flex-direction: column;
+        height: auto;
     }
     #contact, #contactInfo{
         width: 90%;
+       
         margin: auto;
 
         button{
@@ -745,6 +772,10 @@ body {
             font-family: var(--text-font);
             position: absolute;           
         }
+    }
+    #gitLinks {
+        margin: auto;
+        width: 50%;
     }
 }
 
