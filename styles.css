@@ -91,6 +91,13 @@ body {
         border-bottom: solid 1px rgb(112, 112, 112);
     }
 }
+.iconS{
+       display: flex;
+       flex-direction: row;
+       gap: 0.2rem;
+       justify-content: center;
+       align-items: center;
+}
 #scrollBtn{
     display: none;
 }
