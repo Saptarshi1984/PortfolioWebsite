@@ -34,8 +34,5 @@ This site showcases my work, projects, skills, and contact information.
 📦 portfolio-website
 ├── index.html
 ├── style.css
-├── script.js
-├── assets/
-│   ├── images/
-│   └── icons/
+├── script.js  
 └── README.md
