@@ -21,7 +21,12 @@ const mobileLinks = document.getElementById("mobileNav");
 const aLinks = mobileLinks.querySelectorAll("a");
 
 aLinks.forEach(link => {
+
    link.addEventListener("click", (e) => {
+
+      const herf = link.getAttribute("href");
+      //checks if the href is pointed to a id section or websitelink.
+      if(herf.startsWith("#")) {
        e.preventDefault();
 
        // Get the target section ID from the href
@@ -35,12 +40,14 @@ aLinks.forEach(link => {
 
            window.scrollTo({ top: yPosition, behavior: "smooth" });
        }
+      }
 
        // Hide the mobile menu
        mobileLinks.style.display = "none";
        //change cross with bar
        navButton.innerHTML = `<i  class="fa-solid fa-bars"></i>`;
    });
+
 });
 
 

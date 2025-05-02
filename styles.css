@@ -370,6 +370,7 @@ body {
     
     h1, h2{ 
         display: flex;
+        color: var(--title-color);
         background: var(--welcome-bg-color);
         height: 50px;
         align-items: center;
@@ -381,22 +382,14 @@ body {
         text-decoration: none;        
     }
 }
-h1{
-    font-style: italic; 
-    color: #0ff;
-}
-h2{
-    font-style: normal;
-    color: aliceblue;
-    letter-spacing: 1px;
-}
+
 #projContainer{
     width: 92%;
     margin: auto;
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly; 
+    justify-content:space-evenly;
 }
 #projDetails{
     width: 28%;
