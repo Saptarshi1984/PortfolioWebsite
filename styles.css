@@ -42,7 +42,7 @@ body {
     min-width:1.6rem;
     height: auto;
     color: aliceblue;
-    top: 280px;
+    top: 35%;
     left: 6px;
     background:none;
     z-index: 1000;
@@ -141,7 +141,7 @@ body {
     min-width:3rem;
     height: auto;
     color: aliceblue;
-    top: 300px;
+    top: 40%;
     right: 10px;
     background: #fff;
     border-radius: 8px;
@@ -271,8 +271,8 @@ body {
 }
 
 #profile > img {
-    width:100%;
-    height: 600px;
+    min-width:100%;
+    min-height: 80%;
     object-fit: contain;
 }
 #intro-text {
@@ -777,6 +777,10 @@ body {
     #gitLinks {
         margin: auto;
         width: 50%;
+    }
+    #profile {
+        width: 300px;
+        height: 450px;
     }
 }
 
