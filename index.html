@@ -16,7 +16,7 @@
         <a href="#bio-container">Skillsets</a>
         <a href="#projects">Projects</a>
         <a href="#endContainer">Contact</a>
-        <a class="iconS" href=""><span>Resume</span><i class="fa-solid fa-cloud-arrow-down"></i></a>
+        <a class="iconS" href="https://drive.google.com/file/d/1ae-dswwzJ3cqEM1RYingirXjHDPRua_0/view?usp=drive_link"><span>Resume</span><i class="fa-solid fa-cloud-arrow-down"></i></a>
         <a class="iconS" href="https://www.linkedin.com/in/saptarshi-mondal-b9242a11a/" target="_blank" ><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn Profile</span></a>
         <a class="iconS" href="https://github.com/Saptarshi1984" target="_blank"><i class="fa-brands fa-square-github"></i><span>GitHub Profile</span></a>
     </div>
@@ -26,7 +26,7 @@
         <a class="navLink" href="#bio-container">Skillsets</a>
         <a class="navLink" href="#projects">Projects</a>
         <a class="navLink" href="#endContainer">Contact</a>
-        <a class="navLink dnd" href=""><i class="fa-solid fa-cloud-arrow-down"></i>Resume</a>
+        <a class="navLink dnd" href="https://drive.google.com/file/d/1ae-dswwzJ3cqEM1RYingirXjHDPRua_0/view?usp=drive_link" target="_blank"><i class="fa-solid fa-cloud-arrow-down"></i>Resume</a>
     </nav>
     <div id="sideBar">
      <a href="https://www.linkedin.com/in/saptarshi-mondal-b9242a11a/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -229,15 +229,16 @@
     </div>    
 
         <div id="endSection">            
-            <div id="contact">            
+                <div id="contact">            
                         <h2>Send a Message</h2>
+                        <p class="textLight">@PoweredBy EmailJS</p>
                         <form id="contactForm" action="submit">
-                        <input class="userInput" type="text" placeholder="Enter Your Name" required>
-                        <input userInput type="email" placeholder="Your email address" required>
-                        <textarea name="message" id="msg" placeholder="Feel free to send a message..."></textarea>
-                        <button type="submit">Send</button>
+                        <input id="txtName" type="text" placeholder="Enter Your Name" required>
+                        <input id="txtEmail"  type="email" placeholder="Your email address" required>
+                        <textarea id="txtMessage" placeholder="Feel free to send a message..."></textarea>
+                        <button id="submitBtn" type="submit">Send</button>
                         </form>
-                        
+                        <h4 id="msgStatus"></h4>                        
                 </div>
                 <div id="verticleLine"></div>
                 <div id="contactInfo">
@@ -262,8 +263,7 @@
         </div>
 
         
-
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="https://kit.fontawesome.com/eac29af5b4.js" crossorigin="anonymous"></script>
 <script src="script.js"></script>   
 </body>

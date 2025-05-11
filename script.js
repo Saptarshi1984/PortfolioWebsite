@@ -9,7 +9,7 @@ navButton.addEventListener("click", (e) => {
  if(x.style.display == "none") {
     x.style.display = "flex";
     navButton.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
-
+    
  } else {
     x.style.display = "none";
     navButton.innerHTML = `<i  class="fa-solid fa-bars"></i>`;
@@ -60,3 +60,41 @@ window.addEventListener("scroll", () => {
      btn.style.display = "none";
    }
  });
+
+ /* Setup for EmailJS starts here  */
+
+ (function(){
+   emailjs.init({
+     publicKey: "HVBB1QNGvY5XBLc_6",
+   });
+})();
+
+   const btnSubmit = document.getElementById('submitBtn');
+/*    const nameTxt = document.getElementById('txtName').value;
+   const emailTxt = document.getElementById('txtEmail').value;
+   const messageTxt = document.getElementById('txtMessage').value; */
+
+btnSubmit.addEventListener('click', (e) => {
+e.preventDefault();
+
+var msgTemplateParams = {
+   name: document.getElementById('txtName').value,
+   email: document.getElementById('txtEmail').value,
+   message: document.getElementById('txtMessage').value,
+};
+
+emailjs.send('service_bc85t8g', 'template_1hrizsj', msgTemplateParams)
+.then(() => {
+       document.getElementById('msgStatus').textContent = "Message sent successfully";
+       document.getElementById('msgStatus').style.color = '#31EBA1';
+      ['txtName','txtEmail', 'txtMessage'].forEach((id) => {
+      document.getElementById(id).value = "";       
+      })
+})
+.catch(() => {
+   document.getElementById('msgStatus').textContent ="Sending Message failed";
+   document.getElementById('msgStatus').style.color = '#ca3c25';
+});
+});
+
+

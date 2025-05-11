@@ -30,6 +30,10 @@ body {
     --text-font:"Exo 2", sans-serif;
     
 }
+.textLight{
+    color: rgb(116, 115, 115);
+    font-size: small;
+}
 #mobileNav{
     display: none;
 }
@@ -616,6 +620,30 @@ body {
         text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
     }
    
+}
+
+@keyframes smooth_appearence {
+    0%{
+        opacity: 0%;
+    }
+    10%{
+        opacity: 10%;
+    }
+    25% {
+        opacity: 25%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    75%{
+        opacity: 75%;
+    }
+    90%{
+        opacity: 90%;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
 
 @media (width < 1180px) {
