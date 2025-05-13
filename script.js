@@ -1,3 +1,49 @@
+/* Creating a starry background */
+
+
+const divParent = document.getElementById('stars');
+
+window.onload = () => {
+    
+for(let i = 0; i < 100; i++) {
+    /* Left-side stars */
+    const iChildLeft = document.createElement('i');    
+    divParent.appendChild(iChildLeft);
+    iChildLeft.style.top = Math.ceil(Math.random()*1000) + 'px';
+    iChildLeft.style.left = Math.ceil(Math.random()*1000) + 'px';
+    iChildLeft.style.fontSize = Math.ceil(Math.random()*5) + 'px';
+    
+    /* Not every star will blink */
+    if(i % 2 === 0) {
+    iChildLeft.className = 'blink fa-solid fa-star fa-beat';
+    } else {
+        iChildLeft.className = 'blink fa-solid fa-star';
+    }
+    
+    /* Right-side stars */
+    const iChildRight = document.createElement('i');
+    divParent.appendChild(iChildRight);
+    iChildRight.style.top = Math.ceil(Math.random()*1000) + 'px';
+    iChildRight.style.right = Math.ceil(Math.random()*1000) + 'px';
+    iChildRight.style.fontSize = Math.ceil(Math.random()*5) + 'px';
+    
+     if(i % 2 === 0) {
+    iChildRight.className = 'blink fa-solid fa-star fa-beat';
+    } else {
+        iChildRight.className = 'blink fa-solid fa-star';
+    }
+}
+}
+
+const meteor = () => {
+
+    const astroid = document.createElement('i');
+    astroid.className = 'fa-solid fa-meteor';
+
+
+}
+
+/* Starry background ends here */
 
 /* Mobile toggle menu */
 const navButton = document.getElementById("navBtn");
