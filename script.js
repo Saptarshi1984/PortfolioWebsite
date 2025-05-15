@@ -120,7 +120,7 @@ window.addEventListener("scroll", () => {
    const emailTxt = document.getElementById('txtEmail').value;
    const messageTxt = document.getElementById('txtMessage').value; */
 
-btnSubmit.addEventListener('click', (e) => {
+btnSubmit.addEventListener('submit', (e) => {
 e.preventDefault();
 
 var msgTemplateParams = {
