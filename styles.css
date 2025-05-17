@@ -38,7 +38,9 @@ body {
   position: absolute;
   width: 100%;
   height: 80%;
-  pointer-events: none;}
+  pointer-events: none;
+  animation: starry_night 10s linear infinite;
+}
 
 .textLight{
     color: rgb(116, 115, 115);
@@ -612,18 +614,6 @@ body {
     }
 }
 /* Animations */
-@keyframes blink {
-    0% {
-        color: aliceblue;
-    }
-    90% {
-        color: rgb(231, 170, 1);
-    }
-    100%{
-        color: aliceblue;
-    }
-}
-
 
 @keyframes glow {
     0% {
@@ -637,6 +627,17 @@ body {
         text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
     }
    
+}
+@keyframes starry_night{
+    0%{
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(10px);
+    }
 }
 @keyframes smooth_appearence {
     0%{
