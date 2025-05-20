@@ -1,11 +1,10 @@
 /* Creating a starry background */
-
-
 const divParent = document.getElementById('stars');
 
 window.onload = () => {
     
-for(let i = 0; i < 100; i++) {
+for(let i = 0; i < 150; i++) {
+
     /* Left-side stars */
     const iChildLeft = document.createElement('i');    
     divParent.appendChild(iChildLeft);
@@ -34,15 +33,6 @@ for(let i = 0; i < 100; i++) {
     }
 }
 }
-
-const meteor = () => {
-
-    const astroid = document.createElement('i');
-    astroid.className = 'fa-solid fa-meteor';
-
-
-}
-
 /* Starry background ends here */
 
 /* Mobile toggle menu */
@@ -116,7 +106,7 @@ window.addEventListener("scroll", () => {
 })();
 
    const btnSubmit = document.getElementById('submitBtn');
-/*    const nameTxt = document.getElementById('txtName').value;
+/* const nameTxt = document.getElementById('txtName').value;
    const emailTxt = document.getElementById('txtEmail').value;
    const messageTxt = document.getElementById('txtMessage').value; */
 
