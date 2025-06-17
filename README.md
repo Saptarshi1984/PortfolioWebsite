@@ -23,28 +23,32 @@ A responsive and interactive personal portfolio website built using HTML, CSS, a
 
 ## 📄 Project Structure
 
-### 1. **Home Section**
+###1. **Landing Section**
 
-* Brief self-introduction with name, bio, and profile picture.
+* Consists of Portfolio heading along with name, role and a subheading.
+
+### 2. **About Me Section**
+
+* Brief self-introduction with name, bio, and picture.
 * Navigation menu linking to About, Projects, and Contact sections.
 * Smooth scrolling and active link highlighting.
 
-### 2. **About Section**
+### 3. **Skillsets Section**
 
 * Information on education, work experience, and hobbies.
 * Cleanly organized using semantic HTML and styled with CSS.
 
-### 3. **Projects Section**
+### 4. **Projects Section**
 
 * A gallery showcasing personal projects with titles, descriptions, and images.
 * CSS-enhanced layout for a polished appearance.
 
-### 4. **Contact Section**
+### 5. **Contact Section**
 
 * A fully functional contact form with fields: Name, Email, and Message.
 * JavaScript validation ensures all fields are filled correctly.
 
-### 5. **Resume**
+### 5. **Download Resume**
 
 * Downloadable PDF resume linked via a button that opens in a new tab.
 
@@ -72,7 +76,7 @@ A responsive and interactive personal portfolio website built using HTML, CSS, a
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/portfolio-website.git
+   git clone https://github.com/Saptarshi1984/PortfolioWebsite
    ```
 2. Open `index.html` in a browser.
 3. Explore the sections and features interactively.
